@@ -22,8 +22,11 @@ class _HomeScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
       children: const [
         Header(),
+        Spacer(),
+        Footer(),
       ],
     );
   }
