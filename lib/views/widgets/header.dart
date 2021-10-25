@@ -61,7 +61,7 @@ class _AppLogo extends StatelessWidget {
   }
 }
 
-//comming soon
+//coming soon
 
 // class _AuthButtons extends StatelessWidget {
 //   const _AuthButtons({ Key? key }) : super(key: key);
