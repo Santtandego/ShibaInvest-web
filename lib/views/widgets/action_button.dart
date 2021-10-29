@@ -9,14 +9,14 @@ class ActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final actionButton = Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 22),
-      decoration:  BoxDecoration(
+      decoration: const BoxDecoration(
         color: aColor,
-        borderRadius: const BorderRadius.all(Radius.circular(15)),
+        borderRadius:  BorderRadius.all(Radius.circular(15)),
         boxShadow: [
           BoxShadow(
-            offset: const Offset(2,3),
+            offset: Offset(2,3),
             blurRadius: 6,
-            color:  Colors.black.withOpacity(0.36)
+            color:  shadowColor
           )
         ]
       ),

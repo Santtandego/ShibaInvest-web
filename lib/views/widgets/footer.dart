@@ -107,7 +107,7 @@ class _FooterIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final footerIcon = Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       child: Icon(
         icon,
         size: 24,

@@ -27,7 +27,7 @@ class _HomeBodyLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const wellcomeMessage = Text(
+    const _wellcomeMessage = Text(
       Strings.wellcomeMessage,
       style: TextStyle(
         fontSize: 40,
@@ -42,7 +42,7 @@ class _HomeBodyLeft extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
-          wellcomeMessage,
+          _wellcomeMessage,
           ActionButton()
         ],
       )
@@ -55,9 +55,13 @@ class _HomeBodyRight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      margin: const EdgeInsets.all(20),
-      child: const FlutterLogo(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 4),
+      child: CustomCard(
+        pic: Assets.shibaPic,
+        width: 320,
+        widget: Container(),
+      ),
     );
   }
 }

@@ -7,3 +7,4 @@ const dColor = Color(0xffE5E5E5);
 const eColor = Color(0xff707070);
 const fColor = Color(0xff9A9898);
 const gColor = Color(0xfffffffe);
+const shadowColor = Color.fromRGBO(0,0,0,0.36);
