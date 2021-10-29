@@ -17,12 +17,10 @@ class Footer extends StatelessWidget {
       color: dColor,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
           _FooterLeft(),
-          Spacer(),
           _FooterCenter(),
-          Spacer(),
           _FooterRight(),
         ],
       ),
@@ -82,7 +80,7 @@ class _FooterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final footerText = Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Text(
         title,
         style: const TextStyle(
@@ -96,7 +94,7 @@ class _FooterText extends StatelessWidget {
     return InkWell(
       child: footerText,
       hoverColor: cColor,
-      onTap: () => print(path),
+      onTap: (){},
     );
   }
 }
@@ -109,7 +107,7 @@ class _FooterIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final footerIcon = Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Icon(
         icon,
         size: 24,

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shibainvest_web/utils/all_utils.dart';
 import 'package:shibainvest_web/views/widgets/all_widgets.dart';
 
+import 'package:shibainvest_web/views/home/home_uniques.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -23,9 +25,10 @@ class _HomeScreenBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const [
         Header(),
-        Spacer(),
+        HomeBodyUniques(),
         Footer(),
       ],
     );

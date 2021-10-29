@@ -13,4 +13,7 @@ abstract class Strings {
   static const contactUs = 'Contact Us';
 
   static const donateQ = 'donate?';
+
+  static const wellcomeMessage = 'Generate Shiba to play\nand find out new\nCrypto Coins';
+  static const generate = 'generate';
 }
