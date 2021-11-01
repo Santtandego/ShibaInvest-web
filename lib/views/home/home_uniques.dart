@@ -43,7 +43,7 @@ class _HomeBodyLeft extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
           _wellcomeMessage,
-          ActionButton()
+          ActionButton(title: Strings.generate)
         ],
       )
     );
@@ -60,7 +60,13 @@ class _HomeBodyRight extends StatelessWidget {
       child: CustomCard(
         pic: Assets.shibaPic,
         width: 320,
-        widget: Container(),
+        widget: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            Text(Strings.shibaName),
+            ActionButton(title: Strings.shibaName,)
+          ],
+        ),
       ),
     );
   }

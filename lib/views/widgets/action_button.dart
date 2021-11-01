@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:shibainvest_web/utils/all_utils.dart';
 
 class ActionButton extends StatelessWidget {
-  const ActionButton({ Key? key }) : super(key: key);
+  const ActionButton({
+     Key? key,
+     required this.title
+    }) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +25,9 @@ class ActionButton extends StatelessWidget {
           )
         ]
       ),
-      child: const Text(
-          Strings.generate,
-          style: TextStyle(
+      child:  Text(
+          title,
+          style: const TextStyle(
             color: gColor,
             fontSize: 30
           )
