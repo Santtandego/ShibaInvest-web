@@ -43,7 +43,8 @@ class _HomeBodyLeft extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
           _wellcomeMessage,
-          ActionButton(title: Strings.generate)
+          SizedBox(height: 20),
+          ActionButton(title: Strings.generate, fontSize: 30)
         ],
       )
     );
@@ -63,8 +64,13 @@ class _HomeBodyRight extends StatelessWidget {
         widget: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
-            Text(Strings.shibaName),
-            ActionButton(title: Strings.shibaName,)
+            Text(
+              Strings.shibaName,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: bColor
+                )),
+            ActionButton(title: Strings.play, fontSize: 15)
           ],
         ),
       ),

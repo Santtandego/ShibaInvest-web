@@ -49,8 +49,8 @@ class CustomCard extends StatelessWidget {
             ),
           ),
           Container(
-            // child: widget,
-            height: 70,
+            child: widget,
+            // height: 70,
           )
         ],
       ),

@@ -5,15 +5,17 @@ import 'package:shibainvest_web/utils/all_utils.dart';
 class ActionButton extends StatelessWidget {
   const ActionButton({
      Key? key,
-     required this.title
+     required this.title,
+     required this.fontSize
     }) : super(key: key);
 
   final String title;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
     final actionButton = Container(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 22),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
       decoration: const BoxDecoration(
         color: aColor,
         borderRadius:  BorderRadius.all(Radius.circular(15)),
@@ -27,15 +29,15 @@ class ActionButton extends StatelessWidget {
       ),
       child:  Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             color: gColor,
-            fontSize: 30
+            fontSize:  fontSize
           )
         ),
     );
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: InkWell(
         child: actionButton,
         hoverColor: Colors.transparent,
