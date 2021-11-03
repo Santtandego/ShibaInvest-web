@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:get/get.dart';
 
+import 'package:shibainvest_web/provider/all_providers.dart';
 import 'package:shibainvest_web/utils/all_utils.dart';
 
 class Header extends StatelessWidget {
@@ -8,8 +10,9 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var p = Provider.of<ResDesVars>(context).headerMargin;
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      margin: EdgeInsets.symmetric(horizontal: p, vertical: 10),
       padding: const EdgeInsets.all(4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -27,26 +30,27 @@ class _AppLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
+    var p = Provider.of<ResDesVars>(context);
     final appLogo = Row(
-      children: const [
+      children:  [
         Image(
-          width: 47,
-          image: AssetImage(Assets.appLogo)
+          width: p.logoSize,
+          image: const AssetImage(Assets.appLogo),
+          fit: BoxFit.cover
         ),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         Text(
           Strings.shiba,
           style: TextStyle(
             color: bColor,
-            fontSize: 30
+            fontSize: p.logoFs
           ),
         ),
         Text(
           Strings.invest,
           style: TextStyle(
             color: aColor,
-            fontSize: 30
+            fontSize: p.logoFs
           ),
         ),
 

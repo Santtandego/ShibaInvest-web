@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-
-import 'package:shibainvest_web/utils/all_utils.dart';
+import 'package:provider/provider.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/link.dart';
+
+import 'package:shibainvest_web/provider/all_providers.dart';
+import 'package:shibainvest_web/utils/all_utils.dart';
+
 
 class Footer extends StatelessWidget {
   const Footer({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var p = Provider.of<ResDesVars>(context);
+
     return Container(
       alignment: Alignment.bottomCenter,
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: p.footerMargin, vertical: 15),
       margin: const EdgeInsets.only(top: 20),
       color: dColor,
       child: Row(
@@ -79,12 +84,14 @@ class _FooterText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var p = Provider.of<ResDesVars>(context).footerFs;
+
     final footerText = Padding(
       padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Text(
         title,
-        style: const TextStyle(
-          fontSize: 19,
+        style: TextStyle(
+          fontSize: p,
           fontWeight: FontWeight.bold,
           color: cColor
         ),
@@ -106,11 +113,13 @@ class _FooterIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var p = Provider.of<ResDesVars>(context).footerIconS;
+
     final footerIcon = Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Icon(
         icon,
-        size: 24,
+        size: p,
         color: cColor,
       )
     );
