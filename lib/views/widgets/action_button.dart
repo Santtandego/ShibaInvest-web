@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'package:shibainvest_web/provider/all_providers.dart';
 import 'package:shibainvest_web/utils/all_utils.dart';
 
 class ActionButton extends StatelessWidget {
@@ -14,8 +16,10 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var p = Provider.of<ResDesVars>(context);
+
     final actionButton = Container(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: p.headerMargin),
       decoration: const BoxDecoration(
         color: aColor,
         borderRadius:  BorderRadius.all(Radius.circular(15)),

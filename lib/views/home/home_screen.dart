@@ -4,7 +4,7 @@ import 'package:shibainvest_web/provider/all_providers.dart';
 import 'package:shibainvest_web/utils/all_utils.dart';
 import 'package:shibainvest_web/views/widgets/all_widgets.dart';
 
-// import 'package:shibainvest_web/views/home/home_uniques.dart';
+import 'package:shibainvest_web/views/home/home_uniques.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _HomeScreenBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const [
         Header(),
-        // HomeBodyUniques(),
+        HomeBodyUniques(),
         Footer(),
       ],
     );

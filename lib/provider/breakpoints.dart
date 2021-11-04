@@ -5,6 +5,7 @@ import 'package:provider/single_child_widget.dart';
 
 class ResDesVars with ChangeNotifier {
 
+  //HEADER
   double _headerMargin = 20;
   double get headerMargin => _headerMargin;
   set headerMargin(double val) {
@@ -27,18 +28,25 @@ class ResDesVars with ChangeNotifier {
     notifyListeners();
   }
 
-  //app screenshots
-  double _appSSWSize = 60;
-  double get appSSWSize => _appSSWSize;
-  set appSSWSize(double val) {
-    _appSSWSize = val;
+  //HOME BODY
+  double _overviewFs = 60;
+  double get overviewFs => _overviewFs;
+  set overviewFs(double val) {
+    _overviewFs = val;
     notifyListeners();
   }
 
-  double _appSSHSize = 500;
-  double get appSSHSize => _appSSHSize;
-  set appSSHSize(double val) {
-    _appSSHSize = val;
+  double _textButtonFs = 50;
+  double get textButtonFs => _textButtonFs;
+  set textButtonFs(double val) {
+    _textButtonFs = val;
+    notifyListeners();
+  }
+
+  double _homeBodyMargin = 50;
+  double get homeBodyMargin => _homeBodyMargin;
+  set homeBodyMargin(double val) {
+    _homeBodyMargin = val;
     notifyListeners();
   }
 
@@ -124,8 +132,10 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 18;
       p.logoSize = 25;
       p.logoFs = 15;
-      p.appSSWSize = 440;
-      p.appSSHSize = 780;
+
+      p.overviewFs = 17;
+      p.textButtonFs = 15;
+      // p.homeBodyMargin =
 
       p.footerFs = 7;
       p.footerMargin = 10;
@@ -143,8 +153,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 20;
       p.logoSize = 27;
       p.logoFs = 15;
-      p.appSSWSize = 395;
-      p.appSSHSize = 805;
+
+      p.overviewFs = 18.5;
+      p.textButtonFs = 16;
 
       p.footerFs = 8;
       p.footerMargin = 10;
@@ -162,8 +173,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 15;
       p.logoSize = 27;
       p.logoFs = 18;
-      p.appSSWSize = 400;
-      p.appSSHSize = 900;
+
+      p.overviewFs = 20;
+      p.textButtonFs = 18;
 
       p.footerFs = 9.5;
       p.footerMargin = 12;
@@ -180,8 +192,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 29;
       p.logoSize = 31;
       p.logoFs = 22;
-      p.appSSWSize = 450;
-      p.appSSHSize = 950;
+
+      p.overviewFs = 24;
+      p.textButtonFs = 20;
 
       p.footerFs = 11;
       p.footerMargin = 13;
@@ -198,8 +211,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 32;
       p.logoSize = 33;
       p.logoFs = 24;
-      p.appSSWSize = 520;
-      p.appSSHSize = 1000;
+
+      p.overviewFs = 26;
+      p.textButtonFs = 22;
 
       p.footerFs = 12;
       p.footerMargin = 14;
@@ -216,8 +230,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 35;
       p.logoSize = 35;
       p.logoFs = 30;
-      p.appSSWSize = 230;
-      p.appSSHSize = 760;
+
+      p.overviewFs = 29;
+      p.textButtonFs = 24;
 
       p.footerFs = 13;
       p.footerMargin = 15;
@@ -231,8 +246,8 @@ class BreakPoints with ChangeNotifier {
       p.textItemFs = 13;
       p.iconItemS = 18;
     } else if(wS > 550 && wS <= 600) {
-      p.appSSWSize = 250;
-      p.appSSHSize = 780;
+      p.overviewFs = 34;
+      p.textButtonFs = 27;
 
       p.footerFs = 13;
       p.footerMargin = 20;
@@ -249,8 +264,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 38;
       p.logoSize = 37;
       p.logoFs = 33;
-      p.appSSWSize = 280;
-      p.appSSHSize = 800;
+
+      p.overviewFs = 35;
+      p.textButtonFs = 28;
       p.footerMargin = 22;
 
       p.footerFs = 14;
@@ -268,8 +284,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 41;
       p.logoSize = 39;
       p.logoFs = 36;
-      p.appSSWSize = 300;
-      p.appSSHSize = 830;
+
+      p.overviewFs = 20;
+      p.textButtonFs = 15;
 
       p.footerFs = 14;
       p.footerMargin = 20;
@@ -283,8 +300,9 @@ class BreakPoints with ChangeNotifier {
       p.textItemFs = 16;
       p.iconItemS = 19;
     } else if(wS > 700 && wS <= 750) {
-      p.appSSWSize = 330;
-      p.appSSHSize = 850;
+      p.overviewFs = 21;
+      p.textButtonFs = 16;
+
       p.footerFs = 14;
       p.footerMargin = 20;
       p.footerIconS = 20;
@@ -297,8 +315,8 @@ class BreakPoints with ChangeNotifier {
       p.textItemFs = 17;
       p.iconItemS = 20;
     } else if(wS > 750 && wS <= 800) {
-      p.appSSWSize = 360;
-      p.appSSHSize = 900;
+      p.overviewFs = 22;
+      p.textButtonFs = 17;
 
       p.footerFs = 14;
       p.footerMargin = 20;
@@ -312,8 +330,8 @@ class BreakPoints with ChangeNotifier {
       p.textItemFs = 18;
       p.iconItemS = 21;
     } else if(wS > 800 && wS <= 900) {
-      p.appSSWSize = 375;
-      p.appSSHSize = 910;
+      p.overviewFs = 24;
+      p.textButtonFs = 18;
 
       p.footerFs = 14;
       p.footerMargin = 20;
@@ -328,8 +346,9 @@ class BreakPoints with ChangeNotifier {
       p.iconItemS = 22;
     } else if(wS > 900 && wS <= 1000) {
       p.logoSize = 42;
-      p.appSSWSize = 420;
-      p.appSSHSize = 920;
+
+      p.overviewFs = 29;
+      p.textButtonFs = 23;
 
       p.footerFs = 15;
       p.footerMargin = 23;
@@ -346,8 +365,10 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 50;
       p.logoSize = 42;
       p.logoFs = 40;
-      p.appSSWSize = 450;
-      p.appSSHSize = 1210;
+
+      p.overviewFs = 32;
+      p.textButtonFs = 25;
+
       p.footerFs = 15;
       p.footerMargin = 20;
       p.footerIconS = 27;
@@ -363,8 +384,9 @@ class BreakPoints with ChangeNotifier {
       p.headerMargin = 50;
       p.logoSize = 43;
       p.logoFs = 43;
-      p.appSSWSize = 500;
-      p.appSSHSize = 1200;
+
+      p.overviewFs = 34;
+      p.textButtonFs = 28;
 
       p.footerFs = 15;
       p.footerMargin = 25;
